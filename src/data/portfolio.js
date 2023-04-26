@@ -9,12 +9,12 @@ export default [
         title : 'AFIT (Artithmetics for IT)',
         imgUrl : '/assets/ocaml2.jpg',
         stack: ['OCAML ', 'Python'],
-        link : 'https://github.com/arthur-gtgn/FA-REGEX-Project',
+        link : 'https://github.com/Bardakor/AFIT-S12025'
     },
     {
         title : 'FA and REGEX',
         imgUrl : '/assets/Automaton.jpg',
         stack: ['Python ', 'C'],
-        link : 'https://github.com/Bardakor/AFIT-S12025'
+        link : 'https://github.com/arthur-gtgn/FA-REGEX-Project',
     },
 ]
