@@ -18,14 +18,14 @@ export default[
         title: "Baccalauréat Graduate at Institut de l'Alma",
         location: 'Paris, FRANCE',
         duration : '3 Years',
-        details : "High school student in the science track (Bac S), with proven skills in mathematics, physics, and SVT. These subjects have equipped me with a solid foundation in scientific knowledge. Additionally, I have honed my critical thinking and problem-solving abilities through my coursework in these subjects."
+        details : "High school student in the science track (Bac S), with proven skills in mathematics, physics, and biology. These subjects have equipped me with a solid foundation in scientific knowledge. Additionally, I have honed my critical thinking and problem-solving abilities through my coursework in these subjects."
     },
     {
         year : '2019',
         title: 'Assistant VFX Artist at Autrechose',
         location: 'Paris',
         duration : '2 months',
-        details : "working collaboratively with 2D and 3D supervisors, where I have contributed to the development of projects involving 3D modeling and digital integration. Through these experiences, I have gained a deeper understanding of the principles of 3D design and how it can be effectively applied to real-world projects"
+        details : "Working collaboratively with 2D and 3D supervisors, where I have contributed to the development of projects involving 3D modeling and digital integration. Through these experiences, I have gained a deeper understanding of the principles of 3D design and how it can be effectively applied to real-world projects"
     },
     
 ]
