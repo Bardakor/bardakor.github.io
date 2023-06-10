@@ -13,7 +13,7 @@ export default [
     },
     {
         title : 'Dating App',
-        imgUrl : '/assets/Logo',
+        imgUrl : '/assets/Logo.png',
         stack: ['JavaScript ', 'React'],
         link : 'https://github.com/Bardakor/Sports-de-chambres',
     },
