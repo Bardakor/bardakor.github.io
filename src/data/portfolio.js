@@ -12,9 +12,9 @@ export default [
         link : 'https://github.com/Bardakor/AFIT-S12025'
     },
     {
-        title : 'FA and REGEX',
-        imgUrl : '/assets/49789957488_9a2246e71c_o.png',
-        stack: ['Python ', 'C'],
-        link : 'https://github.com/arthur-gtgn/FA-REGEX-Project',
+        title : 'Dating App',
+        imgUrl : '/assets/Logo',
+        stack: ['JavaScript ', 'React'],
+        link : 'https://github.com/Bardakor/Sports-de-chambres',
     },
 ]
