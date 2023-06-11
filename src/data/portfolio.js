@@ -2,7 +2,7 @@ export default [
     {
         title : 'Attack On Castle',
         imgUrl : '/assets/siege-castle.jpg',
-        stack: ['C# ', 'Unity'],
+        stack: ['C# ', 'Unity', 'Blender'],
         link : 'https://aygoun.github.io/Attack-On-Castle-Web.github.io/',
     },
     {   
@@ -12,9 +12,9 @@ export default [
         link : 'https://github.com/Bardakor/AFIT-S12025'
     },
     {
-        title : 'Dating App',
+        title : 'Sports Dating App',
         imgUrl : '/assets/Logo.png',
-        stack: ['JavaScript ', 'React'],
+        stack: ['React', 'NodeJS', 'MongoDB'],
         link : 'https://github.com/Bardakor/Sports-de-chambres',
     },
 ]
