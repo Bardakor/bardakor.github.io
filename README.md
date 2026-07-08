@@ -33,16 +33,18 @@ SEO, social preview metadata, copied public files, and the Trunk Rust entry are 
 rustup target add wasm32-unknown-unknown
 cargo install trunk
 npm ci
-trunk serve --open --public-url /rust-portfolio/
+trunk serve --open --public-url /
 ```
 
 The existing GitHub Pages workflow builds with:
 
 ```bash
-trunk build --release --public-url /rust-portfolio/
+trunk build --release --public-url /
 ```
 
-If the repository is renamed, update these in the same pass:
+Production site: https://bardakor.github.io/
+
+If the repository or Pages path changes, update these in the same pass:
 
 - `index.html` canonical, Open Graph URL, Twitter URL, and `data-public-url`
 - `.github/workflows/deploy.yml` public URL
@@ -57,7 +59,7 @@ Useful local checks:
 npm ci
 npx @tailwindcss/cli -i styles/input.css -o styles/tailwind-output.css
 python3 -m json.tool content.json >/dev/null
-trunk build --release --public-url /rust-portfolio/
+trunk build --release --public-url /
 ```
 
 ## License

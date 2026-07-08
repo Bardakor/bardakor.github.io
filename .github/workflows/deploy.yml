@@ -37,7 +37,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: trunk build --release --public-url /rust-portfolio/
+        run: trunk build --release --public-url /
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
