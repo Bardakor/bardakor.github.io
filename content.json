@@ -2,8 +2,8 @@
   "meta": {
     "issue": "LIAM ABOUROUSSE — PARIS",
     "edition": "EDITION 2026 // MARITIME DATA PRODUCTS",
-    "ticker_top": "PYTHON BACKEND — DATA PIPELINES — VOYAGE REPORT — B2B SAAS — SUPABASE — NEXT.JS — GENAI QA — ",
-    "ticker_bottom": "— FROM PROTOTYPE TO OPERATED SERVICE — HUMAN VALIDATION — QUALITY CONTROLS — MARITIME DECISIONS — "
+    "ticker_top": "",
+    "ticker_bottom": ""
   },
   "hero": {
     "headline_1": "Data Products",
@@ -77,24 +77,6 @@
       "desc": "Won against more than 100 teams and 350 engineering students with a decision-support digital twin for supply-chain scenarios: cost, lead-time, carbon, and executive reporting.",
       "accent": "black",
       "href": ""
-    },
-    {
-      "num": "05",
-      "title": "Ops Admin Stack",
-      "subtitle": "INTERNAL UX FOR RELIABLE PRODUCTION OPERATIONS",
-      "tags": ["Next.js", "Supabase", "SQL", "Cron"],
-      "desc": "Developed internal tools, administration screens, APIs, and scheduled tasks that reduced manual operations and gave business/product teams clearer control over production workflows.",
-      "accent": "blue",
-      "href": "#contact"
-    },
-    {
-      "num": "06",
-      "title": "GenAI QA",
-      "subtitle": "RAG, EMBEDDINGS, SEMANTIC EXTRACTION, OUTPUT CONTROL",
-      "tags": ["LLMs", "RAG", "Embeddings", "Evaluation"],
-      "desc": "Contributed to applied-AI workflows where they made operational sense: semantic extraction, embeddings, data structuring, business-analysis generation, and quality checks on outputs.",
-      "accent": "red",
-      "href": "#contact"
     }
   ],
   "experience": [
