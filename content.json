@@ -17,8 +17,9 @@
         "label": "AMPHITRITE"
       },
       {
-        "num": "100+",
-        "label": "TEAMS BEATEN"
+        "num": "#1",
+        "label": "AT KPMG HACKATHON",
+        "sublabel": "Won against 100 teams"
       },
       {
         "num": "985",
@@ -27,7 +28,7 @@
     ]
   },
   "philosophy": {
-    "eyebrow": "Memoire problematic",
+    "eyebrow": "Mémoire Problematic",
     "headline_1": "Prototype",
     "headline_2": "To Service.",
     "body": "How can a junior engineer, augmented by generative AI but bounded by human validation, take a maritime data product - the Voyage Report - from a demonstrable prototype to a production-operated service without degrading quality or security?",
@@ -45,68 +46,43 @@
       "num": "01",
       "title": "Voyage Report",
       "subtitle": "MARITIME DATA PRODUCT FROM DEMO TO OPERATED SERVICE",
-      "tags": [
-        "Python",
-        "PDF",
-        "Scheduling",
-        "Quality"
-      ],
+      "tags": ["Python", "PDF", "Scheduling", "Quality"],
       "desc": "Productionized a weather-routing report into a server-generated PDF service with a configuration wizard, recurring sends, admin monitoring, and access-control hardening.",
       "accent": "blue",
-      "href": "Memoire_Liam_Abourousse.pdf"
+      "href": ""
     },
     {
       "num": "02",
       "title": "Voyage Insights",
       "subtitle": "FILE INGESTION, KPIS, DASHBOARDS, ANALYTICAL EXPORTS",
-      "tags": [
-        "Python",
-        "Excel/CSV",
-        "KPIs",
-        "SaaS"
-      ],
+      "tags": ["Python", "Excel/CSV", "KPIs", "SaaS"],
       "desc": "Built product workflows around voyage files: column mapping, business enrichment, KPI computation, dashboards, analytical exports, and automated reporting for non-technical users.",
       "accent": "red",
-      "href": "#contact"
+      "href": ""
     },
     {
       "num": "03",
       "title": "Maritime Analysis",
       "subtitle": "APIS, WEATHER-OCEAN ENRICHMENT, OPERATIONAL REPORTING",
-      "tags": [
-        "APIs",
-        "ETL",
-        "AIS",
-        "Weather"
-      ],
+      "tags": ["APIs", "ETL", "AIS", "Weather"],
       "desc": "Combined multi-source AIS, navigation history, metocean data, and vessel-performance signals into simple indicators for performance, delay, route consistency, and forecast quality.",
       "accent": "yellow",
-      "href": "#contact"
+      "href": ""
     },
     {
       "num": "04",
       "title": "KP:AI",
       "subtitle": "KPMG FRANCE INTELLIGENCIA HACKATHON WINNING PROJECT",
-      "tags": [
-        "AI",
-        "Supply Chain",
-        "Digital Twin",
-        "Product"
-      ],
+      "tags": ["AI", "Supply Chain", "Digital Twin", "Product"],
       "desc": "Won against more than 100 teams and 350 engineering students with a decision-support digital twin for supply-chain scenarios: cost, lead-time, carbon, and executive reporting.",
       "accent": "black",
-      "href": "https://www.linkedin.com/in/liam-abourousse"
+      "href": ""
     },
     {
       "num": "05",
       "title": "Ops Admin Stack",
       "subtitle": "INTERNAL UX FOR RELIABLE PRODUCTION OPERATIONS",
-      "tags": [
-        "Next.js",
-        "Supabase",
-        "SQL",
-        "Cron"
-      ],
+      "tags": ["Next.js", "Supabase", "SQL", "Cron"],
       "desc": "Developed internal tools, administration screens, APIs, and scheduled tasks that reduced manual operations and gave business/product teams clearer control over production workflows.",
       "accent": "blue",
       "href": "#contact"
@@ -115,12 +91,7 @@
       "num": "06",
       "title": "GenAI QA",
       "subtitle": "RAG, EMBEDDINGS, SEMANTIC EXTRACTION, OUTPUT CONTROL",
-      "tags": [
-        "LLMs",
-        "RAG",
-        "Embeddings",
-        "Evaluation"
-      ],
+      "tags": ["LLMs", "RAG", "Embeddings", "Evaluation"],
       "desc": "Contributed to applied-AI workflows where they made operational sense: semantic extraction, embeddings, data structuring, business-analysis generation, and quality checks on outputs.",
       "accent": "red",
       "href": "#contact"
@@ -130,26 +101,16 @@
     {
       "years": "NOV 2024 — AUG 2026",
       "role": "Software / Data Engineer",
-      "org": "Amphitrite — Maritime DeepTech from Ecole Polytechnique",
+      "org": "Amphitrite",
+      "subtitle": "Maritime DeepTech · Ecole Polytechnique · Alternance finale",
       "desc": "Final-year work-study role across Python backend, data engineering, SaaS product delivery, and applied AI. Built REST APIs, production data workflows, internal tooling, scheduled tasks, dashboards, exports, and reporting flows for operational teams and enterprise clients."
-    },
-    {
-      "years": "2026",
-      "role": "Memoire: Voyage Report industrialization",
-      "org": "EFREI Paris Panthéon-Assas x Amphitrite",
-      "desc": "Research-framed case study on moving a maritime data product from prototype to operated service with generative AI as an accelerator, and human validation as the control layer for quality, security, and domain correctness."
-    },
-    {
-      "years": "2026",
-      "role": "Winning Product Engineer",
-      "org": "KP:AI — KPMG France IntelligencIA Hackathon",
-      "desc": "Structured the product value proposition, data architecture, scenario logic, and final jury presentation for a decision-support digital twin in supply-chain optimization."
     },
     {
       "years": "2021 — 2026",
       "role": "Engineering Degree",
       "org": "EFREI Paris Panthéon-Assas",
-      "desc": "Specialization in Data Engineering, AI, distributed systems, and cloud. French native, English C1, TOEIC 985/990."
+      "subtitle": "Data Engineering · AI · Distributed Systems · Cloud",
+      "desc": "Five-year engineering program with specialization in data engineering, artificial intelligence, distributed systems, and cloud infrastructure. French native, English C1, TOEIC 985/990."
     }
   ],
   "skills": {
@@ -214,19 +175,19 @@
     {
       "kind": "GITHUB",
       "title": "BARDKOR — CODE, EXPERIMENTS, PRODUCT ENGINEERING",
-      "href": "https://github.com/bardakor"
+      "href": "https://github.com/Bardakor"
     },
     {
       "kind": "LINKEDIN",
       "title": "LIAM ABOUROUSSE — PARIS, SOFTWARE / DATA ENGINEER",
-      "href": "https://www.linkedin.com/in/liam-abourousse"
+      "href": "https://www.linkedin.com/in/liam-abourousse-a216761b8/"
     }
   ],
   "contact": {
     "email": "liam.abourousse@efrei.net",
     "phone": "+33607889056",
-    "github": "https://github.com/bardakor",
-    "linkedin": "https://www.linkedin.com/in/liam-abourousse",
+    "github": "https://github.com/Bardakor",
+    "linkedin": "https://www.linkedin.com/in/liam-abourousse-a216761b8/",
     "cv_en": "CV_SOFT_EN.pdf"
   },
   "footer": {

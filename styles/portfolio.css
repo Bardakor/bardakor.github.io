@@ -114,6 +114,22 @@
   position: relative;
 }
 
+.project-row-static {
+  cursor: default;
+}
+
+.project-row-static:hover {
+  background: transparent;
+}
+
+.project-row-static:hover::before {
+  opacity: 0;
+}
+
+.project-row-static:hover .serif-huge {
+  color: inherit;
+}
+
 .project-row::before {
   content: '';
   position: absolute;
@@ -208,4 +224,163 @@
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* ── HERO STATS CONTINUITY ─────────────────────── */
+.hero-stats {
+  border-top: 1px solid var(--color-border, rgba(20, 20, 18, 0.12));
+}
+
+.hero-stats .stat-block {
+  background: var(--color-bg);
+}
+
+/* ── SKILLS GRID CONTINUITY ────────────────────── */
+.skills-grid .skill-bucket {
+  border-right: 1px solid var(--color-border, rgba(20, 20, 18, 0.12));
+  border-bottom: 1px solid var(--color-border, rgba(20, 20, 18, 0.12));
+}
+
+@media (min-width: 640px) {
+  .skills-grid .skill-bucket:nth-child(2n) {
+    border-right: none;
+  }
+
+  .skills-grid .skill-bucket:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .skills-grid .skill-bucket {
+    border-bottom: none;
+  }
+
+  .skills-grid .skill-bucket:nth-child(2n) {
+    border-right: 1px solid var(--color-border, rgba(20, 20, 18, 0.12));
+  }
+
+  .skills-grid .skill-bucket:last-child {
+    border-right: none;
+  }
+}
+
+/* ── PHILOSOPHY EYEBROW ────────────────────────── */
+.philosophy-eyebrow {
+  letter-spacing: 0.04em;
+}
+
+/* ── PDF PREVIEW (macOS WINDOW) ────────────────── */
+body.pdf-modal-open {
+  overflow: hidden;
+}
+
+.pdf-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 4vw, 40px);
+  background: rgba(20, 20, 18, 0.55);
+  backdrop-filter: blur(6px);
+}
+
+.pdf-modal-overlay.hidden {
+  display: none;
+}
+
+.pdf-window {
+  width: min(960px, 100%);
+  max-height: min(88vh, 900px);
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f5f5f7;
+  box-shadow:
+    0 28px 80px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.pdf-window-chrome {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: linear-gradient(180deg, #ececef 0%, #e3e3e8 100%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.pdf-traffic-lights {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.traffic-light {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  display: inline-block;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.traffic-light.close {
+  background: #ff5f57;
+  cursor: pointer;
+}
+
+.traffic-light.minimize {
+  background: #febc2e;
+}
+
+.traffic-light.maximize {
+  background: #28c840;
+}
+
+.pdf-window-title {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(20, 20, 18, 0.72);
+  text-align: center;
+  padding-right: 52px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pdf-window-body {
+  flex: 1;
+  min-height: 0;
+  background: #fff;
+}
+
+.pdf-frame {
+  width: 100%;
+  height: min(72vh, 760px);
+  border: none;
+  display: block;
+  background: #fff;
+}
+
+button.article-row {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button.contact-link {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  width: 100%;
 }

@@ -1,8 +1,4 @@
 // src/components/hero.rs — Liam Abourousse Portfolio × Leptos 0.7
-//
-// ── UI COMPONENT ─────────────────────────────────────────────────────────────
-// Fully encapsulated component. Data is injected statically at compile time.
-// ─────────────────────────────────────────────────────────────────────────────
 
 use crate::content;
 use leptos::prelude::*;
@@ -24,8 +20,8 @@ pub fn Hero() -> impl IntoView {
                 </h1>
                 <p class="hero-body text-[clamp(0.85rem,1.1vw,1rem)] leading-[1.7] text-muted max-w-[560px] mt-7">{h.body}</p>
             </div>
-            <div class="col-span-full md:col-span-4 flex flex-col">
-                <figure class="portrait-panel relative min-h-[360px] md:min-h-[520px] border-b overflow-hidden bg-bg-dark">
+            <div class="col-span-full md:col-span-4 flex flex-col min-h-0">
+                <figure class="portrait-panel relative flex-1 min-h-[360px] md:min-h-[420px] border-b overflow-hidden bg-bg-dark">
                     <img
                         src=h.portrait
                         alt=h.portrait_alt
@@ -37,12 +33,16 @@ pub fn Hero() -> impl IntoView {
                         "Paris // Software Engineer // Maritime data"
                     </figcaption>
                 </figure>
-                <div class="grid grid-cols-3 md:grid-cols-1 flex-1">
+                <div class="hero-stats grid grid-cols-3 md:grid-cols-1 shrink-0">
                     {stats.into_iter().map(|s| {
+                        let has_sub = !s.sublabel.is_empty();
                         view! {
-                            <div class="stat-block flex flex-col justify-center p-[clamp(16px,2.5vw,32px)] gap-1 border-r last:border-r-0 md:border-r-0 md:border-b md:last:border-b-0">
-                                <span class="font-serif text-[clamp(1.5rem,3vw,2.8rem)] font-black text-red">{s.num}</span>
-                                <span class="text-[0.58rem] tracking-normal text-muted uppercase">{s.label}</span>
+                            <div class="stat-block flex flex-col justify-center p-[clamp(16px,2.5vw,32px)] gap-1 border-r last:border-r-0 md:border-r-0 md:border-b md:last:border-b-0 min-h-[88px]">
+                                <span class="font-serif text-[clamp(1.5rem,3vw,2.8rem)] font-black text-red leading-none">{s.num}</span>
+                                <span class="text-[0.58rem] tracking-normal text-muted uppercase leading-snug">{s.label}</span>
+                                {has_sub.then(|| view! {
+                                    <span class="text-[0.52rem] tracking-normal text-muted/80 normal-case leading-snug mt-0.5">{s.sublabel}</span>
+                                })}
                             </div>
                         }
                     }).collect_view()}

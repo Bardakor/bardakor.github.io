@@ -20,6 +20,8 @@ pub struct Meta {
 pub struct Stat {
     pub num: String,
     pub label: String,
+    #[serde(default)]
+    pub sublabel: String,
 }
 
 #[derive(Deserialize, Clone)]
@@ -57,6 +59,8 @@ pub struct CvEntry {
     pub years: String,
     pub role: String,
     pub org: String,
+    #[serde(default)]
+    pub subtitle: String,
     pub desc: String,
 }
 

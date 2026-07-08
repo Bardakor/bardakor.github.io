@@ -15,8 +15,8 @@ use wasm_bindgen::JsCast;
 
 use components::{
     contact::Contact, experience::Experience, header::Header, hero::Hero, insights::Insights,
-    philosophy::Philosophy, projects::Projects, recognition::Recognition, skills::Skills,
-    splash::Splash, ticker::Ticker,
+    pdf_modal::{provide_pdf_preview, PdfPreviewModal}, philosophy::Philosophy, projects::Projects,
+    recognition::Recognition, skills::Skills, splash::Splash, ticker::Ticker,
 };
 
 #[component]
@@ -36,11 +36,14 @@ fn App() -> impl IntoView {
         cb.forget();
     });
 
+    let pdf_preview = provide_pdf_preview();
+
     view! {
         <Title text="Liam Abourousse — Software / Data Engineer" />
         <Meta name="description" content="Liam Abourousse — Paris-based Software / Data Engineer building Python backends, data products, and B2B SaaS tooling for maritime operations." />
 
         <Splash />
+        <PdfPreviewModal handle=pdf_preview />
 
         <main id="smooth-wrapper">
             <Header />
