@@ -1,0 +1,55 @@
+name: Sync Repositories
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-${{ github.repository }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve mirror repository
+        id: mirror
+        run: |
+          case "${{ github.repository }}" in
+            Bardakor/rust-portfolio)
+              echo "repo=Bardakor/bardakor.github.io" >> "$GITHUB_OUTPUT"
+              ;;
+            Bardakor/bardakor.github.io)
+              echo "repo=Bardakor/rust-portfolio" >> "$GITHUB_OUTPUT"
+              ;;
+            *)
+              echo "Unsupported repository: ${{ github.repository }}" >&2
+              exit 1
+              ;;
+          esac
+
+      - name: Push to mirror repository
+        env:
+          SYNC_TOKEN: ${{ secrets.REPO_SYNC_TOKEN }}
+          MIRROR_REPO: ${{ steps.mirror.outputs.repo }}
+        run: |
+          if [ -z "$SYNC_TOKEN" ]; then
+            echo "::error::REPO_SYNC_TOKEN is not configured on this repository."
+            echo "Create a classic PAT with 'repo' scope and add it as REPO_SYNC_TOKEN on both repos."
+            exit 1
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git remote add mirror "https://x-access-token:${SYNC_TOKEN}@github.com/${MIRROR_REPO}.git"
+          git push mirror "HEAD:refs/heads/main"
