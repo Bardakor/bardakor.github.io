@@ -8,13 +8,13 @@
   "hero": {
     "headline_1": "Data Products",
     "headline_2": "For Operators.",
-    "body": "Software / Data Engineer in Paris building Python backends, APIs, data pipelines, and B2B SaaS tools that turn complex maritime and operational data into decisions: optimization, pricing, capacity, reporting, internal UX, and automation.",
+    "body": "Software / Data Engineer in Paris building Python backends, APIs, data pipelines, and B2B SaaS tools that turn complex and operational data into decisions: optimization, pricing, capacity, reporting, internal UX, and automation.",
     "portrait": "liam-portrait-white.jpg",
     "portrait_alt": "Portrait of Liam Abourousse in a white shirt against a light wall",
     "stats": [
       {
         "num": "2024—26",
-        "label": "AMPHITRITE"
+        "label": "AMPHITRITE @Data Engineer / Product Engineer"
       },
       {
         "num": "#1",
@@ -22,7 +22,7 @@
         "sublabel": "Won against 100 teams"
       },
       {
-        "num": "985",
+        "num": "985 / 990",
         "label": "TOEIC"
       }
     ]
