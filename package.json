@@ -1,0 +1,19 @@
+{
+  "name": "liam-abourousse-portfolio",
+  "version": "1.0.0",
+  "description": "Brutalist Leptos portfolio for Liam Abourousse.",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i styles/input.css -o styles/tailwind-output.css",
+    "check:content": "node -e \"JSON.parse(require('fs').readFileSync('content.json','utf8'))\"",
+    "test": "npm run check:content && npm run build:css"
+  },
+  "keywords": [],
+  "author": "Liam Abourousse",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.1",
+    "tailwindcss": "^4.2.1"
+  }
+}

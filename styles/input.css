@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@source "../src";
+
+@theme {
+  --color-bg: #f2efe6;
+  --color-bg-dark: #141412;
+  --color-text: #141412;
+  --color-text-inv: #f2efe6;
+  --color-muted: #746f64;
+  --color-border: #141412;
+  --color-red: #b63a2d;
+  --color-blue: #204b57;
+  --color-yellow: #c2a55e;
+  --color-offwhite: #f8f5ec;
+
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-sans: 'IBM Plex Sans', Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: auto;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-bg);
+    color: var(--color-text);
+    overflow-x: hidden;
+    font-variant-numeric: tabular-nums;
+  }
+
+  body.is-loading {
+    overflow: hidden;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ::selection {
+    background: var(--color-red);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-blue);
+    outline-offset: 4px;
+  }
+
+  *, *::before, *::after {
+    border-color: var(--color-border);
+  }
+
+  #work,
+  #method,
+  #about,
+  #contact {
+    scroll-margin-top: 88px;
+  }
+}
+
+@import "./portfolio.css";

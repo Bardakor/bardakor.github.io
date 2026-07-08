@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "issue": "LIAM ABOUROUSSE — PARIS",
+    "edition": "EDITION 2026 // MARITIME DATA PRODUCTS",
+    "ticker_top": "PYTHON BACKEND — DATA PIPELINES — VOYAGE REPORT — B2B SAAS — SUPABASE — NEXT.JS — GENAI QA — ",
+    "ticker_bottom": "— FROM PROTOTYPE TO OPERATED SERVICE — HUMAN VALIDATION — QUALITY CONTROLS — MARITIME DECISIONS — "
+  },
+  "hero": {
+    "headline_1": "Data Products",
+    "headline_2": "For Operators.",
+    "body": "Software / Data Engineer in Paris building Python backends, APIs, data pipelines, and B2B SaaS tools that turn complex maritime and operational data into decisions: optimization, pricing, capacity, reporting, internal UX, and automation.",
+    "portrait": "liam-portrait-white.jpg",
+    "portrait_alt": "Portrait of Liam Abourousse in a white shirt against a light wall",
+    "stats": [
+      {
+        "num": "2024—26",
+        "label": "AMPHITRITE"
+      },
+      {
+        "num": "100+",
+        "label": "TEAMS BEATEN"
+      },
+      {
+        "num": "985",
+        "label": "TOEIC"
+      }
+    ]
+  },
+  "philosophy": {
+    "eyebrow": "Memoire problematic",
+    "headline_1": "Prototype",
+    "headline_2": "To Service.",
+    "body": "How can a junior engineer, augmented by generative AI but bounded by human validation, take a maritime data product - the Voyage Report - from a demonstrable prototype to a production-operated service without degrading quality or security?",
+    "steps": [
+      "understand",
+      "frame",
+      "industrialize",
+      "integrate",
+      "automate",
+      "operate"
+    ]
+  },
+  "projects": [
+    {
+      "num": "01",
+      "title": "Voyage Report",
+      "subtitle": "MARITIME DATA PRODUCT FROM DEMO TO OPERATED SERVICE",
+      "tags": [
+        "Python",
+        "PDF",
+        "Scheduling",
+        "Quality"
+      ],
+      "desc": "Productionized a weather-routing report into a server-generated PDF service with a configuration wizard, recurring sends, admin monitoring, and access-control hardening.",
+      "accent": "blue",
+      "href": "Memoire_Liam_Abourousse.pdf"
+    },
+    {
+      "num": "02",
+      "title": "Voyage Insights",
+      "subtitle": "FILE INGESTION, KPIS, DASHBOARDS, ANALYTICAL EXPORTS",
+      "tags": [
+        "Python",
+        "Excel/CSV",
+        "KPIs",
+        "SaaS"
+      ],
+      "desc": "Built product workflows around voyage files: column mapping, business enrichment, KPI computation, dashboards, analytical exports, and automated reporting for non-technical users.",
+      "accent": "red",
+      "href": "#contact"
+    },
+    {
+      "num": "03",
+      "title": "Maritime Analysis",
+      "subtitle": "APIS, WEATHER-OCEAN ENRICHMENT, OPERATIONAL REPORTING",
+      "tags": [
+        "APIs",
+        "ETL",
+        "AIS",
+        "Weather"
+      ],
+      "desc": "Combined multi-source AIS, navigation history, metocean data, and vessel-performance signals into simple indicators for performance, delay, route consistency, and forecast quality.",
+      "accent": "yellow",
+      "href": "#contact"
+    },
+    {
+      "num": "04",
+      "title": "KP:AI",
+      "subtitle": "KPMG FRANCE INTELLIGENCIA HACKATHON WINNING PROJECT",
+      "tags": [
+        "AI",
+        "Supply Chain",
+        "Digital Twin",
+        "Product"
+      ],
+      "desc": "Won against more than 100 teams and 350 engineering students with a decision-support digital twin for supply-chain scenarios: cost, lead-time, carbon, and executive reporting.",
+      "accent": "black",
+      "href": "https://www.linkedin.com/in/liam-abourousse"
+    },
+    {
+      "num": "05",
+      "title": "Ops Admin Stack",
+      "subtitle": "INTERNAL UX FOR RELIABLE PRODUCTION OPERATIONS",
+      "tags": [
+        "Next.js",
+        "Supabase",
+        "SQL",
+        "Cron"
+      ],
+      "desc": "Developed internal tools, administration screens, APIs, and scheduled tasks that reduced manual operations and gave business/product teams clearer control over production workflows.",
+      "accent": "blue",
+      "href": "#contact"
+    },
+    {
+      "num": "06",
+      "title": "GenAI QA",
+      "subtitle": "RAG, EMBEDDINGS, SEMANTIC EXTRACTION, OUTPUT CONTROL",
+      "tags": [
+        "LLMs",
+        "RAG",
+        "Embeddings",
+        "Evaluation"
+      ],
+      "desc": "Contributed to applied-AI workflows where they made operational sense: semantic extraction, embeddings, data structuring, business-analysis generation, and quality checks on outputs.",
+      "accent": "red",
+      "href": "#contact"
+    }
+  ],
+  "experience": [
+    {
+      "years": "NOV 2024 — AUG 2026",
+      "role": "Software / Data Engineer",
+      "org": "Amphitrite — Maritime DeepTech from Ecole Polytechnique",
+      "desc": "Final-year work-study role across Python backend, data engineering, SaaS product delivery, and applied AI. Built REST APIs, production data workflows, internal tooling, scheduled tasks, dashboards, exports, and reporting flows for operational teams and enterprise clients."
+    },
+    {
+      "years": "2026",
+      "role": "Memoire: Voyage Report industrialization",
+      "org": "EFREI Paris Panthéon-Assas x Amphitrite",
+      "desc": "Research-framed case study on moving a maritime data product from prototype to operated service with generative AI as an accelerator, and human validation as the control layer for quality, security, and domain correctness."
+    },
+    {
+      "years": "2026",
+      "role": "Winning Product Engineer",
+      "org": "KP:AI — KPMG France IntelligencIA Hackathon",
+      "desc": "Structured the product value proposition, data architecture, scenario logic, and final jury presentation for a decision-support digital twin in supply-chain optimization."
+    },
+    {
+      "years": "2021 — 2026",
+      "role": "Engineering Degree",
+      "org": "EFREI Paris Panthéon-Assas",
+      "desc": "Specialization in Data Engineering, AI, distributed systems, and cloud. French native, English C1, TOEIC 985/990."
+    }
+  ],
+  "skills": {
+    "buckets": [
+      {
+        "title": "BACKEND",
+        "color": "blue",
+        "list": "Python, FastAPI, Flask, REST APIs, SQL, modular architecture, tests, documentation"
+      },
+      {
+        "title": "DATA PRODUCTS",
+        "color": "none",
+        "list": "ETL, data quality, validation, feature engineering, KPIs, dashboards, reporting, spatiotemporal data"
+      },
+      {
+        "title": "STORAGE & OPS",
+        "color": "yellow",
+        "list": "PostgreSQL, MySQL, Oracle SQL, Supabase, NoSQL, Elasticsearch, Redis, Docker, CI/CD, Grafana"
+      },
+      {
+        "title": "FRONT & AI",
+        "color": "none",
+        "list": "TypeScript, JavaScript, Next.js, Vue, Angular, admin UX, LLMs, RAG, embeddings, evaluation"
+      }
+    ],
+    "marquee": "PYTHON / FASTAPI / SQL / SUPABASE / NEXT.JS / ETL / AIS / PDF REPORTING / RAG / "
+  },
+  "recognition": [
+    {
+      "org": "AMPHITRITE",
+      "award": "Voyage Report: prototype converted into operated production service"
+    },
+    {
+      "org": "KPMG FRANCE",
+      "award": "KP:AI hackathon winner among 100+ teams and 350 students"
+    },
+    {
+      "org": "EFREI",
+      "award": "Engineering degree, Data Engineering, AI, distributed systems, cloud"
+    },
+    {
+      "org": "LANGUAGES",
+      "award": "French native, English C1, TOEIC 985/990"
+    }
+  ],
+  "articles": [
+    {
+      "kind": "MEMOIRE",
+      "title": "DU PROTOTYPE AU SERVICE EN PRODUCTION — VOYAGE REPORT, IA GENERATIVE, VALIDATION HUMAINE",
+      "href": "Memoire_Liam_Abourousse.pdf"
+    },
+    {
+      "kind": "CV EN",
+      "title": "SOFTWARE ENGINEER — PYTHON, DATA PRODUCTS, B2B SAAS",
+      "href": "CV_SOFT_EN.pdf"
+    },
+    {
+      "kind": "CV FR",
+      "title": "INGENIEUR LOGICIEL — PYTHON, PRODUITS DATA, SAAS B2B",
+      "href": "CV_SOFT.pdf"
+    },
+    {
+      "kind": "GITHUB",
+      "title": "BARDKOR — CODE, EXPERIMENTS, PRODUCT ENGINEERING",
+      "href": "https://github.com/bardakor"
+    },
+    {
+      "kind": "LINKEDIN",
+      "title": "LIAM ABOUROUSSE — PARIS, SOFTWARE / DATA ENGINEER",
+      "href": "https://www.linkedin.com/in/liam-abourousse"
+    }
+  ],
+  "contact": {
+    "email": "liam.abourousse@efrei.net",
+    "phone": "+33607889056",
+    "github": "https://github.com/bardakor",
+    "linkedin": "https://www.linkedin.com/in/liam-abourousse",
+    "cv_en": "CV_SOFT_EN.pdf"
+  },
+  "footer": {
+    "left": "© 2026 LIAM ABOUROUSSE",
+    "right": "PARIS // DATA PRODUCTS // MARITIME OPS"
+  }
+}

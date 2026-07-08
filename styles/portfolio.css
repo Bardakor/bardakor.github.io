@@ -1,0 +1,211 @@
+/* ═══════════════════════════════════════════════════
+   PORTFOLIO — NON-UTILITY CSS
+   Animations, pseudo-elements, complex selectors
+   ═══════════════════════════════════════════════════ */
+
+/* ── NOISE OVERLAY ─────────────────────────────── */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* ── ACCESSIBILITY ─────────────────────────────── */
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 10001;
+  transform: translateY(-160%);
+  background: var(--color-bg-dark);
+  color: var(--color-text-inv);
+  border: 1px solid var(--color-text-inv);
+  padding: 10px 14px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* ── SPLASH (GSAP animation states) ────────────── */
+.stamp-block {
+  opacity: 0;
+  transform: translateY(80px) scaleY(1.6);
+}
+
+.ring-bg {
+  fill: none;
+  stroke: rgba(20, 20, 18, 0.12);
+  stroke-width: 2;
+}
+
+.ring-fill {
+  fill: none;
+  stroke: var(--color-red);
+  stroke-width: 2;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  stroke-linecap: round;
+}
+
+/* ── NAV LINK UNDERLINE ────────────────────────── */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-red);
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover {
+  color: var(--color-red);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ── HERO LINE (GSAP initial state) ────────────── */
+.hero-title .line {
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* ── TICKER KEYFRAMES ──────────────────────────── */
+.ticker-track {
+  animation: marquee 25s linear infinite;
+  /* Add padding equal to the gap between elements if any, handled in rust classes */
+}
+
+.ticker-track.reverse {
+  animation: marquee-reverse 25s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+/* ── PROJECT ROW HOVER ─────────────────────────── */
+.project-row {
+  transition: background 0.3s ease;
+  position: relative;
+}
+
+.project-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-row[data-accent="red"]::before { background: var(--color-red); }
+.project-row[data-accent="blue"]::before { background: var(--color-blue); }
+.project-row[data-accent="yellow"]::before { background: var(--color-yellow); }
+.project-row[data-accent="black"]::before { background: var(--color-bg-dark); }
+.project-row:hover::before { opacity: 1; }
+.project-row:hover { background: rgba(0, 0, 0, 0.02); }
+.project-row:hover .serif-huge { color: var(--color-red); }
+
+.serif-huge {
+  transition: color 0.3s ease;
+}
+
+/* ── CV ROW HOVER ──────────────────────────────── */
+.cv-row {
+  transition: background 0.3s ease, padding-left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cv-row:hover {
+  background: rgba(0, 0, 0, 0.02);
+  padding-left: 8px;
+}
+
+/* ── REC ITEM HOVER ────────────────────────────── */
+.rec-item {
+  transition: padding-left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.rec-item:hover {
+  padding-left: 12px;
+}
+
+/* ── ARTICLE ROW HOVER ─────────────────────────── */
+.article-row {
+  transition: background 0.3s ease;
+}
+
+.article-row:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.article-row:hover .art-arrow {
+  transform: translate(4px, -4px);
+}
+
+.art-arrow {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── CONTACT LINK HOVER ────────────────────────── */
+.contact-link {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.contact-link:hover {
+  background: var(--color-bg-dark);
+  color: var(--color-text-inv);
+}
+
+/* ── MARQUEE OUTLINE TEXT ──────────────────────── */
+.marquee-outline {
+  -webkit-text-stroke: 1.5px var(--color-text);
+  color: transparent;
+}
+
+/* ── PORTRAIT DOSSIER PANEL ────────────────────── */
+.portrait-panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(20, 20, 18, 0) 58%, rgba(20, 20, 18, 0.28) 100%),
+    repeating-linear-gradient(90deg, rgba(242, 239, 230, 0.08) 0 1px, transparent 1px 72px);
+  mix-blend-mode: multiply;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

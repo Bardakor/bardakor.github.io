@@ -1,0 +1,11 @@
+pub mod contact;
+pub mod experience;
+pub mod header;
+pub mod hero;
+pub mod insights;
+pub mod philosophy;
+pub mod projects;
+pub mod recognition;
+pub mod skills;
+pub mod splash;
+pub mod ticker;
