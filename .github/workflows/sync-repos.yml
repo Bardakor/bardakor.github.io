@@ -16,11 +16,6 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
       - name: Resolve mirror repository
         id: mirror
         run: |
@@ -37,19 +32,35 @@ jobs:
               ;;
           esac
 
-      - name: Push to mirror repository
+      - name: Skip when mirror is already up to date
+        id: check
         env:
-          SYNC_TOKEN: ${{ secrets.REPO_SYNC_TOKEN }}
+          GH_TOKEN: ${{ secrets.REPO_SYNC_TOKEN }}
           MIRROR_REPO: ${{ steps.mirror.outputs.repo }}
         run: |
-          if [ -z "$SYNC_TOKEN" ]; then
+          if [ -z "$GH_TOKEN" ]; then
             echo "::error::REPO_SYNC_TOKEN is not configured on this repository."
-            echo "Create a classic PAT with 'repo' scope and add it as REPO_SYNC_TOKEN on both repos."
             exit 1
           fi
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          REMOTE_SHA=$(gh api "repos/${MIRROR_REPO}/commits/main" --jq .sha)
+          echo "local=${{ github.sha }}"
+          echo "remote=${REMOTE_SHA}"
 
-          git remote add mirror "https://x-access-token:${SYNC_TOKEN}@github.com/${MIRROR_REPO}.git"
-          git push mirror "HEAD:refs/heads/main"
+          if [ "$REMOTE_SHA" = "${{ github.sha }}" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Mirror already matches this commit; skipping sync."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Sync mirror repository
+        if: steps.check.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.REPO_SYNC_TOKEN }}
+          MIRROR_REPO: ${{ steps.mirror.outputs.repo }}
+        run: |
+          gh repo sync "${MIRROR_REPO}" \
+            --source "${{ github.repository }}" \
+            --branch main \
+            --force
