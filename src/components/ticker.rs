@@ -22,6 +22,10 @@ pub fn Ticker(#[prop(default = false)] reverse: bool) -> impl IntoView {
         meta.ticker_top
     };
 
+    if text.trim().is_empty() {
+        return view! { <></> }.into_any();
+    }
+
     let t1 = text.clone();
     let t2 = text.clone();
 
@@ -36,5 +40,5 @@ pub fn Ticker(#[prop(default = false)] reverse: bool) -> impl IntoView {
                 <span class="font-sans text-[0.65rem] font-medium tracking-normal uppercase text-muted whitespace-nowrap pr-4">{t2}</span>
             </div>
         </div>
-    }
+    }.into_any()
 }

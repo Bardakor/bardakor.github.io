@@ -31,14 +31,16 @@ pub fn Skills() -> impl IntoView {
             }).collect_view()}
             </div>
             <div class="p-[clamp(16px,2.5vw,32px)] flex flex-col justify-center">
-                <div class="overflow-hidden py-5 flex">
-                    <div class="ticker-track flex w-max items-center pr-4">
-                        <span class="font-serif text-[clamp(2rem,4vw,3.5rem)] font-black whitespace-nowrap pl-4">{marquee.clone()}</span>
-                        <span class="marquee-outline font-serif text-[clamp(2rem,4vw,3.5rem)] font-black whitespace-nowrap pl-4">{m2.clone()}</span>
-                    </div>
-                    <div class="ticker-track flex w-max items-center pr-4" aria-hidden="true">
-                        <span class="font-serif text-[clamp(2rem,4vw,3.5rem)] font-black whitespace-nowrap pl-4">{marquee.clone()}</span>
-                        <span class="marquee-outline font-serif text-[clamp(2rem,4vw,3.5rem)] font-black whitespace-nowrap pl-4">{m2}</span>
+                <div class="overflow-hidden py-5">
+                    <div class="marquee-track flex w-max items-center">
+                        <div class="marquee-set flex w-max items-center">
+                            <span class="font-serif text-[clamp(2rem,4vw,3.5rem)] font-black whitespace-nowrap">{marquee.clone()}</span>
+                            <span class="marquee-outline font-serif text-[clamp(2rem,4vw,3.5rem)] font-black whitespace-nowrap">{m2.clone()}</span>
+                        </div>
+                        <div class="marquee-set flex w-max items-center" aria-hidden="true">
+                            <span class="font-serif text-[clamp(2rem,4vw,3.5rem)] font-black whitespace-nowrap">{marquee.clone()}</span>
+                            <span class="marquee-outline font-serif text-[clamp(2rem,4vw,3.5rem)] font-black whitespace-nowrap">{m2}</span>
+                        </div>
                     </div>
                 </div>
             </div>
