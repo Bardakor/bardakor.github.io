@@ -16,6 +16,12 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
       - name: Resolve mirror repository
         id: mirror
         run: |
@@ -60,7 +66,7 @@ jobs:
           GH_TOKEN: ${{ secrets.REPO_SYNC_TOKEN }}
           MIRROR_REPO: ${{ steps.mirror.outputs.repo }}
         run: |
-          gh repo sync "${MIRROR_REPO}" \
-            --source "${{ github.repository }}" \
-            --branch main \
-            --force
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote add mirror "https://x-access-token:${GH_TOKEN}@github.com/${MIRROR_REPO}.git"
+          git push mirror "HEAD:main" --force
