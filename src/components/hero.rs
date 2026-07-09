@@ -27,7 +27,7 @@ pub fn Hero() -> impl IntoView {
                         alt=h.portrait_alt
                         loading="eager"
                         decoding="async"
-                        class="absolute inset-0 h-full w-full object-cover object-[50%_38%] mix-blend-luminosity"
+                        class="absolute inset-0 h-full w-full object-cover object-[50%_38%]"
                     />
                     <figcaption class="absolute left-0 bottom-0 right-0 border-t bg-bg/90 px-[clamp(16px,2.5vw,32px)] py-3 text-[0.58rem] font-semibold tracking-normal text-text uppercase">
                         "Paris // Software Engineer // Maritime data"
